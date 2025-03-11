@@ -3,7 +3,7 @@ from FunctionChoices import InputFunctions
 class TextInterface:
     def __init__(self):
         self.InputFunctions = InputFunctions()
-        self.quit = 'quitQUIT'
+        self.quit = 'quit'
 
     def start(self):
         while True:
@@ -41,7 +41,7 @@ class TextInterface:
     def programOne(self):
         while True:
             userInput = input("\nInput (input 'quit' to return to main menu): ")
-            if userInput in self.quit:
+            if userInput.lower() in self.quit:
                 break
             self.InputFunctions.isOddOrEven(userInput)
         print()
@@ -49,7 +49,7 @@ class TextInterface:
     def programTwo(self):
         while True:
             userInput = input("\nInput (input 'quit' to return to main menu): ")
-            if userInput in self.quit:
+            if userInput.lower() in self.quit:
                 break
             self.InputFunctions.isVowelOrConsonant(userInput)
         print()
@@ -57,7 +57,7 @@ class TextInterface:
     def programThree(self):
         while True:
             userInput = input("\nInput (input 'quit' to return to main menu): ")
-            if userInput in self.quit:
+            if userInput.lower() in self.quit:
                 break
             self.InputFunctions.isSpecialCharacter(userInput)
         print()
@@ -65,7 +65,7 @@ class TextInterface:
     def programFour(self):
         while True:
             userInput = input("\nInput (input 'quit' to return to main menu): ")
-            if userInput in self.quit:
+            if userInput.lower() in self.quit:
                 break
             self.InputFunctions.allInOne(userInput)
         print()
