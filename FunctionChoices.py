@@ -36,8 +36,12 @@ class InputFunctions:
             print("Input must only be a single character!")
             return
 
-        if userInput.isalnum() or userInput==' ':
+        if userInput.isalnum():
             print(f"{userInput} is not a special character!")
+            return
+        
+        if userInput == " ":
+            print(f"{userInput} is a space!")
             return
 
         print(f"{userInput} is a special character!")
